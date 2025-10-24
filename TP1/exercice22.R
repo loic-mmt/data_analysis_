@@ -52,3 +52,4 @@ print(round(100 * tab_freq, 2))
 
 
 
+
