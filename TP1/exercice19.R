@@ -10,18 +10,18 @@ data
 tab_counts <- as.matrix(data[row.names(data) != "Total", colnames(data) != "Total"])
 tab_counts
 
-# Fréquences globale (somme à 1)
+# Fréquences globale (somme à 100%)
 tab_freq <- prop.table(tab_counts)
-print(round(tab_freq, 3))
+print(round(100 * tab_freq, 2))
 
 #3)
-# Fréquences par ligne (chaque ligne somme à 1)
+# Fréquences par ligne (chaque ligne somme à 100%)
 tab_freq_row <- prop.table(tab_counts, margin = 1)
-print(round(tab_freq_row, 3))
+print(round(100 * tab_freq_row, 2))
 
-# Fréquences par colonne (chaque colonne somme à 1)
+# Fréquences par colonne (chaque colonne somme à 100%)
 tab_freq_col <- prop.table(tab_counts, margin = 2)
-print(round(tab_freq_col, 3))
+print(round(100 * tab_freq_col, 2))
 
 #4)
 summary(tab_counts)
