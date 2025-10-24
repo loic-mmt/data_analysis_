@@ -24,3 +24,9 @@ tab_freq_col <- prop.table(tab_counts, margin = 2)
 print(round(tab_freq_col, 3))
 
 #4)
+summary(tab_counts)
+chisq.test(tab_counts)
+
+#5
+# X-squared = 11.175, df = 4, p-value = 0.02466
+# Au seuil 5% (α = 0.05), les deux caractères ne sont pas indépendants.
